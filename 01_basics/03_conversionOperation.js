@@ -1,4 +1,4 @@
-let score = "33"
+/*let score = "33"
  
 console.log(typeof score)   //string
 
@@ -20,7 +20,7 @@ console.log(con);  // true
 let no=44
 let strCon = String(no)
 console.log(typeof strCon);  //String
-console.log(strCon);  //44
+console.log(strCon);  //44  */
 
 //when null is converted to number , then it give 0
 //true , false are converted to 1,0 respectively
@@ -42,25 +42,25 @@ let str1 = "hello"
 let str2 = " hitesh"
 
 let str3 = str1 + str2
-// console.log(str3);
+console.log(str3); 
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+console.log("1" + 2);   //12
+console.log(1 + "2");   //12
+console.log("1" + 2 + 2);  //122
+console.log(1 + 2 + "2");  //32
 
-// console.log( (3 + 4) * 5 % 3);
+console.log( (3 + 4) * 5 % 3);  //dont write confusing code
 
-// console.log(+true);
-// console.log(+"");
+console.log(+true);  //1 : dont write confusing code
+console.log(+"");  //0
 
 let num1, num2, num3
 
-num1 = num2 = num3 = 2 + 2
+num1 = num2 = num3 = 2 + 2  //dont write confusing code
 
 let gameCounter = 100
 ++gameCounter;
-console.log(gameCounter);
+console.log(gameCounter); //101
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
