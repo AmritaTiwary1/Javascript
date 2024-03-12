@@ -22,3 +22,5 @@ console.table([typeof name  ,typeof age,typeof isTrue,typeof state , typeof time
 │ 3       │ 'undefined' │
 │ 4       │ 'object'    │
 */
+
+
