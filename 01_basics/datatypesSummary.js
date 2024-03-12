@@ -22,7 +22,6 @@ const BigNumber = 345435565366533323n
 console.log(BigNumber);  //345435565366533323n
 console.log(typeof BigNumber);  //bigint
 
-
 //reference (non primitive)
 //----> array , objects , functions
 //arrays ----
@@ -44,3 +43,27 @@ const myFunction = function(){
 console.log(typeof myFunction); //function
 console.log(myFunction()); // op---> "helloworld undefined"
 myFunction()  //hello world 
+
+//************************************************************************
+
+// In memory , stack manage primitive and heap managed non primitive
+
+let myName = "amrita";
+let anotherName =myName;
+console.log(anotherName); //amrita
+anotherName = "bhagyaShree";
+console.log(anotherName );  //bhagyaShree
+console.log(myName); //amrita
+//here , when anotherName take refernce from myName , and when we change the values inside anotherName, values didnt chnage in myName
+
+let user = {
+    email : "amritadev@gamil.com",
+    upi : "dev@upiiii"
+}
+console.log(user);  //{ email: 'amritadev@gamil.com', upi: 'dev@upiiii' }
+
+let userTwo = user;
+userTwo.email = "devamrit@gmial.com"
+console.log(userTwo);  //{ email: 'devamrit@gmial.com', upi: 'dev@upiiii' }
+
+//here in object , values changes when we make changes in reference object bcoz object are non primitive data types which use heap that make changes in main object
