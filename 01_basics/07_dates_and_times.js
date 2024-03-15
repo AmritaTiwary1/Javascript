@@ -33,7 +33,21 @@ let totMiliSecTillNow = Date.now();
 //console.log(myCreatedDate2.getTime())/3600000;   //464904 , total hours from 1970....
 //console.log(Date.now()/1000);  //1710493344.413(changes with time) , date.now() give total milisecond till now when we divide it by 1000 , it gives total second till now . since 1 secind = 1000 milisecond
 
-//to calculate hours of a quiz
+let newDate = new Date();
+//console.log(newDate);       //2024-03-15T14:39:40.593Z
+//console.log(newDate.getMonth()+1);       //3
+//console.log(newDate.getDay());     //5
+
+//console.log(`Today date is : ${newDate.getDate()} and months is : ${newDate.getMonth()}`);  //Today date is : 15 and months is : 2
+
+//different features provide by date.tolacaleString() function
+console.log(newDate.toLocaleString('default',{     //in second argument, it is object where we can define how to print our output , means eg:weekday :"long :means day name should be long , Monday not mon"
+      weekday : "long" 
+}));   //Friday
+
+
+//Extra Things Done By me :to calculate hours of a quiz 
+
 let StartTime = new Date(2024,2,15 ,3,5);
 //console.log(StartTime.toLocaleString());  //3/15/2024, 3:05:00 AM
 let StartTimeInMiliSec = StartTime.getTime(); 
@@ -42,18 +56,20 @@ let StartTimetothour = Math.floor(StartTimeInMiliSec/3600000);
 //console.log(StartTimetothour);   //475131  
 
 let EndTime = new Date(2024,2,15,15,5);
-console.log(EndTime.toLocaleString());     //3/15/2024, 3:05:00 PM
+//console.log(EndTime.toLocaleString());     //3/15/2024, 3:05:00 PM
 let EndTimeInMiliSec = EndTime.getTime();
-console.log(EndTimeInMiliSec);     //1710515100000
+//console.log(EndTimeInMiliSec);     //1710515100000
 let EndTimeTothour = Math.floor(EndTimeInMiliSec/3600000);
-console.log(EndTimeTothour);     //475143
+//console.log(EndTimeTothour);     //475143
 
 let diff = EndTimeTothour - StartTimetothour ;
-console.log(diff);  //12   ---- total differene between start time and end time
+//console.log(diff);  //12   ---- total differene between start time and end time
 
 //how to find total hours taken by user till current time from given time
 let currDiff = Math.floor(Date.now()/3600000) - StartTimetothour ;
-console.log(currDiff);  //7 
+//console.log(currDiff);  //7 
+
+
 
 
 
