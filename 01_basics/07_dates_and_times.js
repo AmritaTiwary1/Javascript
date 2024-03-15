@@ -25,6 +25,37 @@ let myCreatedDate1 = new Date(2024 , 0,22,3,4);   // 4th , 5th aguments are hour
 let myCreatedDate2 = new Date("01-14-2023")  //the way we write in argument , output will also be in that way
 //console.log(myCreatedDate2.toLocaleString());    //1/14/2023, 12:00:00 AM
 
-let myCreatedDate3 = Date.now();
-//console.log(myCreatedDate3);      //1710445095155
+let totMiliSecTillNow = Date.now();
+//console.log(totlMiliSecTillNow);      //1710445095155 ,it changes every second(milisecond) it is total milisecond from 1970 to till date
+
+//console.log(myCreatedDate2.getTime()); //1673654400000 , it changes every milisecond, it gives the total milisecond between current time and myCreatedDate2
+
+//console.log(myCreatedDate2.getTime())/3600000;   //464904 , total hours from 1970....
+//console.log(Date.now()/1000);  //1710493344.413(changes with time) , date.now() give total milisecond till now when we divide it by 1000 , it gives total second till now . since 1 secind = 1000 milisecond
+
+//to calculate hours of a quiz
+let StartTime = new Date(2024,2,15 ,3,5);
+//console.log(StartTime.toLocaleString());  //3/15/2024, 3:05:00 AM
+let StartTimeInMiliSec = StartTime.getTime(); 
+//console.log(StartTimeInMiliSec);    //1710471900000
+let StartTimetothour = Math.floor(StartTimeInMiliSec/3600000);  
+//console.log(StartTimetothour);   //475131  
+
+let EndTime = new Date(2024,2,15,15,5);
+console.log(EndTime.toLocaleString());     //3/15/2024, 3:05:00 PM
+let EndTimeInMiliSec = EndTime.getTime();
+console.log(EndTimeInMiliSec);     //1710515100000
+let EndTimeTothour = Math.floor(EndTimeInMiliSec/3600000);
+console.log(EndTimeTothour);     //475143
+
+let diff = EndTimeTothour - StartTimetothour ;
+console.log(diff);  //12   ---- total differene between start time and end time
+
+//how to find total hours taken by user till current time from given time
+let currDiff = Math.floor(Date.now()/3600000) - StartTimetothour ;
+console.log(currDiff);  //7 
+
+
+
+
 
