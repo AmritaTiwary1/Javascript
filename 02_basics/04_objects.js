@@ -114,3 +114,19 @@ const {courseInstructor : sir} = course   //{courseInstructor : ci }means shortf
 
 console.log(sir);  //hitesh
 
+//in react , to pass props in function , we use above format
+// const navbar =({company})=>{};    //navbar(company = "dev")
+
+//JSON ---
+/*{
+    "name":"dev",
+    "id":123,
+}  keys are in double comma
+https://api.github.com/users/hiteshchoudhary   ----> Data in Json format   */
+
+//Api can be in array format ----[  {} ,  {} , {} , {} , {} ]
+
+
+
+
+
