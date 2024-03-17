@@ -94,3 +94,23 @@ const allKeysOfObj1 = Object.keys(obj1);
 
 //console.log(obj1.hasOwnProperty('name'));  //true
 //console.log(objA.hasOwnProperty('name'));  //false
+
+
+/////////////////////--------////////////////////////------------//////////////////////////----------////////////////////////////------------------////////////////////////////////////-----
+
+//OBJECT DE-STRUCTURE AND JSON API INTRO 
+
+
+const course = {
+    coursename : "jsInHindi",
+    price:"999",
+    courseInstructor : "hitesh"
+}
+// to access multiple times courseInstructor from course , we need to write course.courseInstrucctor
+
+//ANOTHER BETTER AND WIDELY USED METHOD IS :
+
+const {courseInstructor : sir} = course   //{courseInstructor : ci }means shortform of course instructor is ci from now , many times , when we need to access some keys from API , we would not change real api keys name , insted of that , make aliasName of it by using given syntax
+
+console.log(sir);  //hitesh
+
