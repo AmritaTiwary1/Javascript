@@ -107,3 +107,4 @@ const addTwo = function (num) {
     return num+2;
 }
 addTwo(8);   // no input :  but the main thing is that a variable has hold function  
+
