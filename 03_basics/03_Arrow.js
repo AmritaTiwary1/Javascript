@@ -8,7 +8,7 @@ const userObj = {
     
        console.log(this); 
       /* output of (this) ---in object or inside function of object , "this" means all the keys and value
-      {
+  =>output :     {
   username: 'hitesh',
   price: 999,
   welcomeMessage: [Function: welcomeMessage]
@@ -21,7 +21,7 @@ const userObj = {
 userObj.username = "dev";
 //userObj.welcomeMessage();   //dev welcome
 
-//console.log(this);  //{} ----> in terminal , empty bracket bt in terminal ,WINDOWS's diff. properties will be shown 
+//console.log(this);  //{} ----> in terminal , empty bracket bt in browser ,WINDOWS's diff. properties will be shown 
 
 
 function chai1() {
@@ -38,11 +38,13 @@ const chai2 = function(){
     console.log(this.name);
     console.log(this);
 }
-//console.log("WHEN WE USE SECOND METHOD OF WRITING FUNCTION : " , chai2());  //output :combinations of objects appears in terminal and WHEN WE USE SECOND METHOD OF WRITING FUNCTION :  undefined
+//console.log("WHEN WE USE SECOND METHOD OF WRITING FUNCTION : " , chai2());  //output :combinations of objects appears in terminal and in terminal the output was -"WHEN WE USE SECOND METHOD OF WRITING FUNCTION :  undefined"
 
  const chai3 = ()=>{ 
+    name ="dev";
+    console.log(this.name);
      console.log(this); }
-//console.log(chai3());      //-----{} ,empty barces , when function is declare using ARROW 
+console.log(chai3());      //-----"undefined {} undefined" ,empty barces for "this" , when function is declare using ARROW 
 
 
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  IMPLICIT RETURN   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -68,9 +70,10 @@ const addTwo3 = (num1 , num2) =>  num1 + num2;
 
 
 const returnObj = () =>({ name : "dev" , friend:"hari"})  //parenthesis() is imp. otherwise , it will not work 
-console.log(returnObj());        //{ name: 'dev', friend: 'hari' }
+//console.log(returnObj());        //{ name: 'dev', friend: 'hari' }
 
-
+//implicit return - means dont use return keyword , just use curly braces
+//explicit return - means use return keyboard 
 
 
 
