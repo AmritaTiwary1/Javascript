@@ -11,11 +11,19 @@ const temperature = 41
 // console.log("Execute");  //Execute
 
 // if(2==="2"){
-//     console.log(equal);
+//     console.log("equal");
 // }
 // else{
 //     console.log("=== means comparing value as well as data types of variable");
 // }
+
+// if(2=="2"){
+//         console.log("== check value only not datatypes");  
+//     }
+//     else{
+//         console.log("== means comparing value as well as data types of variable");
+//     }   // op - == check value only not datatypes
+
  //output : === means comparing value as well as data types of variable
 // <, >, <=, >=, ==, !=, ===, !==
 
