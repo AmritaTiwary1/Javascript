@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script> /*SOME FAMOUS EVENTS :
+     type, timestamp, defaultPrevented
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode */
+
+    // document.getElementById('owl').onclick = function(){  //-----> AddEventListener sud b used NOT onclick,oncick function sud b avoided bcoz it dont give Event listener like mouse hover,drag and drop
+    //     alert("owl clicked")
+    // }
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }  //---->here , there are not 3 arguments in functions bt there are smtimes 3 arguments -('click', function(e){}, true/false)
+
+
+
+      document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        //e.stopPropagation()  //--->this will stop running the script wriiten for outer box-ul 
+    }, false)  //---> false here is default value , so we can emit it also 
+    
+    document.getElementById('google').addEventListener('click',function(e){
+         e.preventDefault();
+       // e.stopPropagation();  ////--->this will stop running the script wriiten for outer box-ul , it will write - clicked inside the ul if we didnt used stopPropagation() 
+        console.log("google clicked");
+    }, false)
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+
+
+     /* console.log(e.target.parentNode);
+      let removeIt = e.target.parentNode;                                      //---> e.target.parentNode is the whole html tag which is clicked , eg- <li>.....</li>
+      removeIt.remove();   
+                                                  //----> it will remove the thing stored in removeIt varible, here , <li>......</li> will be removed
+   //  removeIt.parentNode.removeChild(removeIt);                       //above code line and this code line are doing same
+    
+   //above codes will remove all img at once , if we click anywhere in the body
+
+    //above code line OR below code line    */
+      
+      
+      console.log(e.target.tagName);  //
+        if (e.target.tagName === 'IMG') {   //---> when img tag will appear then remove that img
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode //---> e.target.parentNode is the whole html tag which is clicked , eg- <li>.....</li>
+            removeIt.remove();
+           // when we clicked owl ,it was not removing bcoz in the above code when we add event listener , we write - stopPropagation , it means , it will ignore all the script that is writen n its parent node
+       // so , comment out --e.stopPropagation()
+        }
+    }
+    )
+
+</script>
+</html>
