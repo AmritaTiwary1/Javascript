@@ -10,7 +10,8 @@
     <h1>TIC TIC TIC</h1>
     <button id="start" type="button" class="btn btn-success">Start</button>
     <button id="stop" type="button" class="btn btn-danger">Stop</button>
-
+    <button id="slow" type="button" class="btn btn-success">Slow Speed</button>
+    <button id="fast" type="button" class="btn btn-success">Fast Speed</button>
 </body>
 <script>
     const sayHitesh = function(){
@@ -19,19 +20,29 @@
     const changeText = function(){
         document.querySelector('h1').innerHTML += ".";
     }
+      let changeMe = setInterval(changeText, 800);
 
-    
-    const changeMe = setInterval(changeText, 500);
-
-    document.querySelector('#start').addEventListener('click', function(){
+      document.querySelector('#start').addEventListener('click', function(){
         document.querySelector('h1').innerHTML="TIC TIC TIC";
+        changeMe = setInterval(changeText, 500);
         
     })
 
     document.querySelector('#stop').addEventListener('click', function(){
         clearInterval(changeMe);
         console.log("STOPPED");
-        
     })
+
+        document.querySelector('#slow').addEventListener('click', function(){
+            clearInterval(changeMe);
+            document.querySelector('h1').innerHTML="TIC TIC TIC";
+            changeMe = setInterval(changeText, 1000);
+      })
+
+      document.querySelector('#fast').addEventListener('click', function(){
+        clearInterval(changeMe);
+        document.querySelector('h1').innerHTML="TIC TIC TIC";
+            changeMe = setInterval(changeText, 200);
+        })
 </script>
 </html>
