@@ -1,3 +1,5 @@
+<!-- BMI is weight in kilograms (kg) divided by height in meters (m) squared -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,18 +9,27 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="../styles.css" /> -->
-    <title>JavaScript Background Color Switcher</title>
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            background-image: url(body-mass-index.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+           
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="welcome.html">Navbar</a>
+      <a class="navbar-brand" href="bmi.html">BMI</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a href="/" aria-current="page">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
           </li>
        </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -27,30 +38,5 @@
         </form>
       </div>
     </nav>
-    <div class="canvas">
-      <!-- <a
-        style="
-          background-color: #fff;
-          padding: 10px 30px;
-          border-radius: 8px;
-          color: #212121;
-          text-decoration: none;
-          border: 2px solid #212121;
-        "
-        href="../index.html"
-        >Back to Home Page</a
-      > -->
-      <h1>Color Scheme Switcher</h1>
-      <span class="button" id="grey"></span>
-      <span class="button" id="white"></span>
-      <span class="button" id="blue"></span>
-      <span class="button" id="yellow"></span>
-      <span class="button" id="purple"></span>
-      <h2>
-        Try clicking on one of the colors above
-        <span>to change the background color of this page!</span>
-      </h2>
-    </div>
-    <script src="index.js"></script>
   </body>
 </html>
