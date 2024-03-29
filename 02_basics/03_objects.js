@@ -39,9 +39,9 @@ Object.freeze(jsUser);      //freeze is func which allow to not make changes dir
 jsUser.age = 20;   // trying to replace
 //console.log(jsUser);
 /* 
-{
+{   //no change detected
   name: 'amrita',
-  age: 18,
+  age: 18,    
   location: 'jaipur',
   lastLoginDay: [ 'mon ', 'sat' ],
   email: '3',
